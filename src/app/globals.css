@@ -14,8 +14,24 @@
   }
 }
 
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 2px currentColor;
+    color: black; /* Makes the text transparent so only the outline is visible */
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for other browsers */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
