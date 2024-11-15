@@ -6,15 +6,15 @@ import { FiArrowLeft } from "react-icons/fi";
 function About() {
   const router = useRouter();
   return (
-    <div className="py-10 px-20">
+    <div className="relative pb-10 px-20 font-pangolin text-[40px]">
       <div
-        className="bg-[#DDE156] cursor-pointer text-[#1C1B1F] rounded-full w-10 flex justify-center items-center h-10"
+        className="bg-[#DDE156] absolute top-5 cursor-pointer text-[#1C1B1F] rounded-full w-10 flex justify-center items-center h-10"
         onClick={() => router.push("/")}
       >
         <FiArrowLeft />
       </div>
-      <section className="w-full h-screen py-5 flex justify-center items-center">
-        <Image src={"/about.png"} width={1050} height={520} alt="about" />
+      <section className="w-full h-screen flex justify-center items-center">
+        <Image src={"/about.png"} width={1150} height={520} alt="about" />
       </section>
       <section className="w-full px-20 py-5 flex flex-col justify-start items-center">
         <Image src={"/about_art_1.png"} width={700} height={700} alt="fort" />
