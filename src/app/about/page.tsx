@@ -6,26 +6,46 @@ import { FiArrowLeft } from "react-icons/fi";
 function About() {
   const router = useRouter();
   return (
-    <div className="relative pb-10 px-20 font-pangolin text-[40px]">
+    <div className="relative pb-10 px-5 sm:px-10 lg:px-20 font-pangolin text-[20px] sm:text-[30px] lg:text-[40px]">
+      {/* Back Button */}
       <div
-        className="bg-[#DDE156] absolute top-5 cursor-pointer text-[#1C1B1F] rounded-full w-10 flex justify-center items-center h-10"
+        className="bg-[#DDE156] absolute top-5 left-5 sm:left-10 p-2 cursor-pointer text-[#1C1B1F] rounded-full w-8 sm:w-10 h-8 sm:h-10 flex justify-center items-center"
         onClick={() => router.push("/")}
       >
-        <FiArrowLeft />
+        <FiArrowLeft className="text-lg sm:text-xl" />
       </div>
-      <section className="w-full h-screen flex justify-center items-center">
-        <Image src={"/about.png"} width={1150} height={520} alt="about" />
+
+      {/* Hero Section */}
+      <section className="w-full h-[70vh] sm:h-screen flex justify-center items-center">
+        <Image
+          src={"/about.png"}
+          width={1150}
+          height={520}
+          alt="about"
+          className="w-full max-w-[1150px] object-contain"
+        />
       </section>
-      <section className="w-full px-20 py-5 flex flex-col justify-start items-center">
-        <Image src={"/about_art_1.png"} width={700} height={700} alt="fort" />
-        <div className="w-full flex flex-col justify-between items-center text-center px-20 text-xl gap-10 text-[#BBBBBB]">
+
+      {/* Content Section */}
+      <section className="w-full px-5 sm:px-10 lg:px-20 py-5 flex flex-col justify-start items-center">
+        {/* Art Image 1 */}
+        <Image
+          src={"/about_art_1.png"}
+          width={700}
+          height={700}
+          alt="fort"
+          className="w-full max-w-[700px] object-contain"
+        />
+
+        {/* Text Block 1 */}
+        <div className="w-full flex flex-col justify-between items-center text-center px-2 sm:px-10 lg:px-20 text-sm sm:text-base lg:text-xl gap-5 sm:gap-10 text-[#BBBBBB]">
           <p>Hello !! I’m Jash.</p>
           <p>
-            Firstly, i’m from the vibrant city of Bengaluru, India – the land of
-            techies, temples, terrific and food. I’m pretty chill and go with
-            the flow type of a person. I like Hiking up hills, perfecting my
-            yoga poses, strolling through museums, binge-watching documentaries,
-            and doodling for fun!
+            Firstly, I’m from the vibrant city of Bengaluru, India – the land of
+            techies, temples, terrific food, and fun. I’m pretty chill and go
+            with the flow type of a person. I like hiking up hills, perfecting
+            my yoga poses, strolling through museums, binge-watching
+            documentaries, and doodling for fun!
           </p>
           <p>Oh, and I love a good chat – I’m all ears!</p>
           <p>
@@ -34,14 +54,18 @@ function About() {
             learn something new!
           </p>
         </div>
+
+        {/* Art Image 2 */}
         <Image
           src={"/about_art_2.png"}
           width={200}
           height={200}
-          alt="fort"
-          className="my-20"
+          alt="art"
+          className="my-10 w-32 sm:w-48 lg:w-56"
         />
-        <div className="w-full flex flex-col justify-between items-center text-center px-20 text-xl gap-10 text-[#BBBBBB]">
+
+        {/* Text Block 2 */}
+        <div className="w-full flex flex-col justify-between items-center text-center px-2 sm:px-10 lg:px-20 text-sm sm:text-base lg:text-xl gap-5 sm:gap-10 text-[#BBBBBB]">
           <p>
             “As a harmonizer and idealist, I’m all about combining big-picture
             thinking with a love for collaboration. I focus on building strong
@@ -53,14 +77,18 @@ function About() {
             together and keeping the creative energy high!”
           </p>
         </div>
+
+        {/* Art Image 3 */}
         <Image
           src={"/about_art_3.png"}
           width={200}
           height={200}
-          alt="fort"
-          className="my-20"
+          alt="art"
+          className="my-10 w-32 sm:w-48 lg:w-56"
         />
-        <div className="w-full flex flex-col justify-between items-center text-center px-20 text-xl gap-10 text-[#BBBBBB]">
+
+        {/* Text Block 3 */}
+        <div className="w-full flex flex-col justify-between items-center text-center px-2 sm:px-10 lg:px-20 text-sm sm:text-base lg:text-xl gap-5 sm:gap-10 text-[#BBBBBB]">
           <p>
             I’m all about creating seamless, user-focused experiences from start
             to finish! Whether it’s diving into UX research to understand user
