@@ -63,7 +63,7 @@ export default function Home() {
   return (
     <div className="bg-[#1B1B1B] text-white">
       {/* hero */}
-      <section className="lg:h-[100vh] pt-20 w-screen flex flex-col justify-center items-center font-bold lg:text-[168px] md:text-[120px] text-[80px] leading-tight overflow-hidden">
+      <section className="lg:h-[100vh] pt-10 w-screen flex flex-col justify-center items-center font-bold lg:text-[155px] md:text-[120px] text-[80px] leading-tight overflow-hidden">
         <motion.h1
           className="whitespace-nowrap w-screen"
           style={{ x: translateX1 }}
@@ -102,7 +102,7 @@ export default function Home() {
       {/* profile img */}
       <section
         ref={profileRef}
-        className="h-screen w-screen flex flex-col justify-center items-center px-8 sm:px-12 md:px-20 py-10 sm:py-16 md:py-20"
+        className="h-screen w-screen flex flex-col justify-center items-center px-8 sm:px-12 md:px-16 py-10 sm:py-16 md:py-20"
       >
         <motion.div
           initial="hidden"
@@ -114,7 +114,7 @@ export default function Home() {
           <Image
             src={"/profile.png"}
             alt="hero"
-            width={1200}
+            width={1400}
             height={500}
             className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[1200px]"
           />
@@ -148,7 +148,7 @@ export default function Home() {
         >
           <span className="inline-block h-px w-12 sm:w-16 bg-white mr-4 sm:mr-8"></span>
           <button
-            className="bg-transparent border border-white px-8 sm:px-12 lg:px-16 py-3 sm:py-4 lg:py-5 text-base sm:text-lg md:text-xl rounded-2xl"
+            className="bg-transparent border border-white px-8 sm:px-12 lg:px-16 py-3 sm:py-4 lg:py-5 text-base sm:text-lg md:text-xl rounded-xl"
             onClick={() => router.push("/about")}
           >
             Learn more about me
@@ -166,7 +166,7 @@ export default function Home() {
           >
             <Image
               src={"/wiggles.png"}
-              width={150}
+              width={300}
               height={150}
               alt="wiggles"
             />
@@ -177,7 +177,7 @@ export default function Home() {
           >
             <Image
               src={"/waybot_txt.png"}
-              width={150}
+              width={300}
               height={150}
               alt="waybot"
             />
@@ -188,7 +188,7 @@ export default function Home() {
           >
             <Image
               src={"/foodbuddy_logo.png"}
-              width={150}
+              width={250}
               height={150}
               alt="foodbuddy"
             />
@@ -199,7 +199,7 @@ export default function Home() {
           >
             <Image
               src={"/dryfold_logo.png"}
-              width={150}
+              width={300}
               height={150}
               alt="dryfold"
             />
@@ -222,7 +222,7 @@ export default function Home() {
           <span className="inline-block h-px w-4 sm:w-16 bg-white"></span>
           <a href="/resume.pdf" target="_blank" download>
             <motion.button
-              className="bg-[#306CCE80] text-white px-8 sm:px-12 lg:px-16 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl rounded-2xl"
+              className="bg-[#306CCE80] text-white px-8 sm:px-12 lg:px-16 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl rounded-xl"
               whileHover={{ scale: 1.1 }} // Adds hover effect
             >
               Download My Resume

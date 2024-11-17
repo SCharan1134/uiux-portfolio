@@ -16,13 +16,13 @@ function About() {
       </div>
 
       {/* Hero Section */}
-      <section className="w-full h-[70vh] sm:h-screen flex justify-center items-center">
+      <section className="w-full h-[70vh]  flex justify-center items-center mb-32">
         <Image
           src={"/about.png"}
-          width={1150}
+          width={1450}
           height={520}
           alt="about"
-          className="w-full max-w-[1150px] object-contain"
+          className="w-full max-w-[1150px] object-contain filter grayscale"
         />
       </section>
 
@@ -31,7 +31,7 @@ function About() {
         {/* Art Image 1 */}
         <Image
           src={"/about_art_1.png"}
-          width={700}
+          width={600}
           height={700}
           alt="fort"
           className="w-full max-w-[700px] object-contain"
@@ -58,8 +58,8 @@ function About() {
         {/* Art Image 2 */}
         <Image
           src={"/about_art_2.png"}
-          width={200}
-          height={200}
+          width={150}
+          height={100}
           alt="art"
           className="my-10 w-32 sm:w-48 lg:w-56"
         />
