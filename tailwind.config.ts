@@ -15,6 +15,7 @@ const config: Config = {
     },
     fontFamily: {
       pangolin: ["Pangolin"],
+      degular: ["degular"],
     },
   },
   plugins: [],

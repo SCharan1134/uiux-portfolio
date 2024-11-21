@@ -6,7 +6,7 @@ import { FiArrowLeft } from "react-icons/fi";
 function About() {
   const router = useRouter();
   return (
-    <div className="relative pb-10 px-5 sm:px-10 lg:px-20 font-pangolin text-[20px] sm:text-[30px] lg:text-[40px]">
+    <div className="relative pb-10 px-5 sm:px-10 lg:px-20 font-pangolin text-[20px] sm:text-[30px] lg:text-[40px] py-24">
       {/* Back Button */}
       <div
         className="bg-[#DDE156] absolute top-5 left-5 sm:left-10 p-2 cursor-pointer text-[#1C1B1F] rounded-full w-8 sm:w-10 h-8 sm:h-10 flex justify-center items-center"
@@ -16,13 +16,13 @@ function About() {
       </div>
 
       {/* Hero Section */}
-      <section className="w-full h-[70vh]  flex justify-center items-center mb-32">
+      <section className="w-full h-full  flex justify-center items-center mb-32">
         <Image
           src={"/about.png"}
           width={1450}
           height={520}
           alt="about"
-          className="w-full max-w-[1150px] object-contain filter grayscale"
+          className="w-full max-w-[1050px] object-contain filter grayscale"
         />
       </section>
 

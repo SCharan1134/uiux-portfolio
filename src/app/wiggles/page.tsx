@@ -8,10 +8,10 @@ function Wiggles() {
   return (
     <div>
       <div
-        className="bg-[#DDE156] absolute top-10 mx-32  cursor-pointer text-[#1C1B1F] rounded-full w-10 flex justify-center items-center h-10"
+        className="bg-[#DDE156] absolute top-5 left-5 sm:left-10 p-2 cursor-pointer text-[#1C1B1F] rounded-full w-8 sm:w-10 h-8 sm:h-10 flex justify-center items-center"
         onClick={() => router.push("/")}
       >
-        <FiArrowLeft />
+        <FiArrowLeft className="text-lg sm:text-xl" />
       </div>
       <section className="w-full flex justify-center items-center">
         <Image

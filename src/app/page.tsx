@@ -116,17 +116,17 @@ export default function Home() {
             alt="hero"
             width={1400}
             height={500}
-            className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[1200px]"
+            className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[1400px]"
           />
         </motion.div>
       </section>
       {/* intro */}
       <section
         ref={ref}
-        className="w-screen text-white text-[35px] flex flex-col justify-center items-center px-8 sm:px-12 md:px-24 lg:px-48 py-5"
+        className="w-screen text-white text-[35px] flex flex-col justify-center items-center px-8 sm:px-12 md:px-24 lg:px-48 py-5 font-degular"
       >
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-snug text-center"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-snug text-center font-extralight"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={variants}
@@ -140,7 +140,7 @@ export default function Home() {
         </motion.p>
 
         <motion.div
-          className="my-10 sm:my-16 lg:my-20 flex items-center flex-wrap justify-center"
+          className="my-10 sm:my-16 lg:my-20 flex items-center flex-wrap justify-center font-degular font-semibold"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={variants}
@@ -166,7 +166,7 @@ export default function Home() {
           >
             <Image
               src={"/wiggles.png"}
-              width={300}
+              width={250}
               height={150}
               alt="wiggles"
             />
@@ -188,7 +188,7 @@ export default function Home() {
           >
             <Image
               src={"/foodbuddy_logo.png"}
-              width={250}
+              width={200}
               height={150}
               alt="foodbuddy"
             />
@@ -213,7 +213,7 @@ export default function Home() {
         className="w-screen flex flex-col justify-center items-center px-8 sm:px-12 md:px-24 lg:px-48 py-5"
       >
         <motion.div
-          className="my-10 sm:my-16 lg:my-20 flex items-center flex-wrap justify-center gap-4"
+          className="my-10 sm:my-16 lg:my-20 flex items-center flex-wrap justify-center gap-4 font-degular font-semibold"
           initial="hidden"
           animate={downloadInView ? "visible" : "hidden"}
           variants={containerVariants}
