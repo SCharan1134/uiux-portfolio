@@ -1,277 +1,117 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { motion, useScroll, useTransform, useInView } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+// import { motion, useScroll, useTransform, useInView } from "motion/react";
+// import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const router = useRouter();
-  const { scrollYProgress } = useScroll();
-
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect screen size
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Define responsive animations
-  const translateX1 = useTransform(
-    scrollYProgress,
-    [0, 1],
-    isMobile ? [-340, -1000] : [-500, -1000]
-  );
-  const translateX2 = useTransform(
-    scrollYProgress,
-    [0, 1],
-    isMobile ? [-305, 800] : [-300, 800]
-  );
-  const translateX3 = useTransform(
-    scrollYProgress,
-    [0, 0.5],
-    isMobile ? [-350, -600] : [-200, -600]
-  );
-
-  const ref = useRef(null);
-  const profileRef = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const downloadRef = useRef(null);
-  const downloadInView = useInView(downloadRef, { once: true });
-  const profileInView = useInView(profileRef, { once: true });
-
-  const variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 }, // Initially hidden and shifted down
-    visible: { opacity: 1, y: 0 }, // Fully visible and aligned
-  };
-
-  const iconVariants = {
-    hidden: { opacity: 0, scale: 0.8 }, // Hidden with smaller scale
-    visible: { opacity: 1, scale: 1 }, // Fully visible and normal scale
-  };
+  const caseStudy = [
+    {
+      image: "/waybot-logo.png",
+      page: "/waybot",
+      content:
+        "WAYBOT offers a solution for efficient crowd management, specifically in amusement parks. this involves the implementation of a kiosk equipped with various features designed to streamline operations and enhance visitor experiences.",
+    },
+    {
+      image: "/sage-logo.png",
+      page: "/sage",
+      content:
+        "SAGE is an AI-powered platform that simplifies access to geospatial information for users of all backgrounds. From disaster response to agricultural challenges, Sage provides solutions by leveraging the power of geospatial data.",
+    },
+    {
+      image: "/dryfold-logo.png",
+      page: "/dryfold",
+      content:
+        "DRYFOLD is a aI based laundry folding machine which can  promptly fold clothes as they are removed from the dryer. This process helps to mitigate the formation of wrinkles and the accumulation of garments on surfaces such as beds or chairs.",
+    },
+    {
+      image: "/wiggles-logo.png",
+      page: "/wiggles",
+      content:
+        "WIGGLES is a pet traing app for Young dog owners who struggle to meet their pet's specific needs, in their daily life. also, Addressing different ways to strengthen the human-animal bond and improve the dog's overall well-being.",
+    },
+  ];
 
   return (
     <div className="bg-[#1B1B1B] text-white">
       {/* hero */}
-      <section className="lg:h-[100vh] pt-10 w-screen flex flex-col justify-center items-center font-bold lg:text-[155px] md:text-[120px] text-[80px] leading-tight overflow-hidden">
-        <motion.h1
-          className="whitespace-nowrap w-screen"
-          style={{ x: translateX1 }}
-        >
-          <span className="text-border">INSPIRE . </span>
-          <span className="text-white">
-            LEARN <span className="text-[rgb(226,51,42)]">.</span>{" "}
-          </span>
-          <span className="text-border">CREATE .</span>
-        </motion.h1>
-        <motion.h1
-          className="whitespace-nowrap w-screen"
-          style={{ x: translateX2 }}
-        >
-          <span className="text-border">LEARN . </span>
-          <span className="text-white">
-            CREATE <span className="text-[#FDBF31]">.</span>{" "}
-          </span>
-          <span className="text-border">INSPIRE .</span>
-        </motion.h1>
-        <motion.h1
-          className="whitespace-nowrap w-screen"
-          style={{ x: translateX3 }}
-        >
-          <span className="text-border">CREATE . </span>
-          <span className="text-white">
-            INSPIRE <span className="text-[#264475]">.</span>{" "}
-          </span>
-          <span className="text-border">LEARN .</span>
-        </motion.h1>
-      </section>
-      {/* logo */}
-      <section className="lg:h-[100vh] w-screen flex justify-center items-center">
-        <Image src={"/logo.png"} alt="hero" width={500} height={500} />
-      </section>
-      {/* profile img */}
-      <section
-        ref={profileRef}
-        className="h-screen w-screen flex flex-col justify-center items-center px-8 sm:px-12 md:px-16 py-10 sm:py-16 md:py-20"
-      >
-        <motion.div
-          initial="hidden"
-          animate={profileInView ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="flex justify-center"
-        >
-          <Image
-            src={"/profile.png"}
-            alt="hero"
-            width={1400}
-            height={500}
-            className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[1400px]"
-          />
-        </motion.div>
-      </section>
-      {/* intro */}
-      <section
-        ref={ref}
-        className="w-screen text-white text-[35px] flex flex-col justify-center items-center px-8 sm:px-12 md:px-24 lg:px-48 py-5 font-degular"
-      >
-        <motion.p
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-snug text-center font-extralight"
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
-          👋 I’m a <span className="text-[#FDBF31] font-bold">UX designer</span>{" "}
-          who thinks even buttons should be easy and fun to use! I love creating
-          designs that look good and make people happy, while keeping things
-          simple and frustration-free. I bring empathy, humor, and a little bit
-          of my own style to everything I create. 😊
-        </motion.p>
-
-        <motion.div
-          className="my-10 sm:my-16 lg:my-20 flex items-center flex-wrap justify-center font-degular font-semibold"
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-        >
-          <span className="inline-block h-px w-12 sm:w-16 bg-white mr-4 sm:mr-8"></span>
+      <section className="w-full h-full sm:px-16 px-5">
+        <h1 className="font-fredericka sm:text-[140px] text-8xl sm:tracking-widest tracking-wide">
+          Learn<span className="text-[#F8FF00]">.</span>
+        </h1>
+        <h1 className="font-fredericka sm:text-[140px] text-8xl sm:tracking-widest tracking-wide">
+          Create<span className="text-[#F8FF00]">.</span>
+        </h1>
+        <h1 className="font-fredericka sm:text-[140px] text-8xl sm:tracking-widest tracking-wide">
+          Inspire<span className="text-[#F8FF00]">.</span>
+        </h1>
+        <div className="w-full flex sm:flex-row flex-col gap-10 sm:items-center items-start justify-between py-10">
           <button
-            className="bg-transparent border border-white px-8 sm:px-12 lg:px-16 py-3 sm:py-4 lg:py-5 text-base sm:text-lg md:text-xl rounded-xl"
             onClick={() => router.push("/about")}
+            className="font-fredericka border-2 border-white sm:min-w-[300px] min-w-[200px] text-white hover:text-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-3 sm:text-4xl text-2xl"
           >
-            Learn more about me
+            ABOUT ME
           </button>
-          <span className="inline-block h-px w-12 sm:w-16 bg-white ml-4 sm:ml-8"></span>
-        </motion.div>
-      </section>
-
-      {/* case studies */}
-      <section className="h-screen w-screen flex flex-col justify-center items-center">
-        <div className="w-full max-w-full overflow-x-scroll flex gap-6 sm:gap-8 lg:gap-10 whitespace-nowrap pl-[10vw] sm:pl-[20vw] lg:pl-[30vw] px-6 sm:px-12 lg:px-20 no-scrollbar">
-          <div
-            className="cursor-pointer w-[300px] sm:w-[400px] lg:w-[550px] h-[300px] sm:h-[400px] lg:h-[550px] bg-[#306CCE80] flex justify-center items-center flex-shrink-0 rounded-2xl lg:rounded-3xl"
-            onClick={() => router.push("/wiggles")}
+          <button
+            onClick={() => window.open("/resume.pdf", "_blank")}
+            className="font-fredericka border-2 border-white  sm:min-w-[300px] min-w-[200px] text-white hover:text-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-3 sm:text-4xl text-2xl"
           >
-            <Image
-              src={"/wiggles.png"}
-              width={250}
-              height={150}
-              alt="wiggles"
-            />
-          </div>
-          <div
-            className="cursor-pointer w-[300px] sm:w-[400px] lg:w-[550px] h-[300px] sm:h-[400px] lg:h-[550px] bg-[#306CCE80] flex justify-center items-center flex-shrink-0 rounded-2xl lg:rounded-3xl"
-            onClick={() => router.push("/waybot")}
+            RESUME
+          </button>
+          <button
+            onClick={() => router.push("/contact")}
+            className="font-fredericka border-2 border-white sm:min-w-[300px] min-w-[200px] text-white hover:text-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-3 sm:text-4xl text-2xl"
           >
-            <Image
-              src={"/waybot_txt.png"}
-              width={300}
-              height={150}
-              alt="waybot"
-            />
-          </div>
-          <div
-            className="cursor-pointer w-[300px] sm:w-[400px] lg:w-[550px] h-[300px] sm:h-[400px] lg:h-[550px] bg-[#306CCE80] flex justify-center items-center flex-shrink-0 rounded-2xl lg:rounded-3xl"
-            onClick={() => router.push("/foodbuddy")}
-          >
-            <Image
-              src={"/foodbuddy_logo.png"}
-              width={200}
-              height={150}
-              alt="foodbuddy"
-            />
-          </div>
-          <div
-            className="cursor-pointer w-[300px] sm:w-[400px] lg:w-[550px] h-[300px] sm:h-[400px] lg:h-[550px] bg-[#306CCE80] flex justify-center items-center flex-shrink-0 rounded-2xl lg:rounded-3xl"
-            onClick={() => router.push("/dryfold")}
-          >
-            <Image
-              src={"/dryfold_logo.png"}
-              width={300}
-              height={150}
-              alt="dryfold"
-            />
-          </div>
+            CONTACT
+          </button>
         </div>
       </section>
-
-      {/* dowload */}
-      <section
-        ref={downloadRef}
-        className="w-screen flex flex-col justify-center items-center px-8 sm:px-12 md:px-24 lg:px-48 py-5"
-      >
-        <motion.div
-          className="my-10 sm:my-16 lg:my-20 flex items-center flex-wrap justify-center gap-4 font-degular font-semibold"
-          initial="hidden"
-          animate={downloadInView ? "visible" : "hidden"}
-          variants={containerVariants}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
-          <span className="inline-block h-px w-4 sm:w-16 bg-white"></span>
-          <a href="/resume.pdf" target="_blank" download>
-            <motion.button
-              className="bg-[#306CCE80] text-white px-8 sm:px-12 lg:px-16 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl rounded-xl"
-              whileHover={{ scale: 1.1 }} // Adds hover effect
-            >
-              Download My Resume
-            </motion.button>
-          </a>
-          <span className="inline-block h-px w-4 sm:w-16 bg-white"></span>
-        </motion.div>
-        <motion.div
-          className="pb-16 sm:pb-24 lg:pb-32 flex gap-3 sm:gap-5 flex-wrap justify-center"
-          initial="hidden"
-          animate={downloadInView ? "visible" : "hidden"}
-          variants={containerVariants}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-        >
-          <motion.div
-            className="p-3 sm:p-4 bg-[#383D38] rounded-full cursor-pointer"
-            onClick={() =>
-              router.push("https://www.instagram.com/jaswanthpindiboina")
-            }
-            variants={iconVariants}
-            transition={{ duration: 0.6 }}
+      {/* logo */}
+      <section className="relative w-full h-full  sm:px-16 px-5 flex sm:flex-row flex-col sm:items-start items-center justify-center sm:gap-28 gap-5 py-16">
+        <div className="bg-[#1B1B1B] z-50">
+          <Image
+            src={"/logo.png"}
+            width={500}
+            height={500}
+            alt="logo"
+            className=" rounded-full w-full max-w-[500px] z-50 h-full object-contain"
+          />
+        </div>
+        <div className="py-24">
+          <h2 className="w-fit font-Parkinsans text-3xl">
+            <p className="text-white/50">
+              <span className="text-[#F8FF00]">&quot;</span>
+              Design Is Not Just What It
+              <br /> Looks Like And Feels Like
+              <br /> Design Is How It Works
+              <span className="text-[#F8FF00]">&quot;</span>
+            </p>
+          </h2>
+        </div>
+        <div className="border-2 border-white/50 border-dashed absolute w-full top-1/2 z-10"></div>
+      </section>
+      <section className="py-16 space-y-16 w-full ">
+        {caseStudy.map((item, index) => (
+          <div
+            key={index}
+            className="w-full sm:pl-28 pl-0 flex sm:flex-row flex-col items-start justify-center sm:gap-16 gap-2 cursor-pointer"
+            onClick={() => router.push(item.page)}
           >
-            <Image src={"/insta.png"} width={30} height={30} alt="insta" />
-          </motion.div>
-          <motion.div
-            className="p-3 sm:p-4 bg-[#383D38] rounded-full cursor-pointer"
-            variants={iconVariants}
-            transition={{ duration: 0.6 }}
-          >
-            <a href="mailto:jaswanth7779@gmail.com">
-              <Image src={"/mail.png"} width={30} height={30} alt="mail" />
-            </a>
-          </motion.div>
-          <motion.div
-            className="p-3 sm:p-4 bg-[#383D38] rounded-full cursor-pointer"
-            onClick={() =>
-              router.push("https://www.linkedin.com/in/jaswanthpindiboina/")
-            }
-            variants={iconVariants}
-            transition={{ duration: 0.6 }}
-          >
-            <Image
-              src={"/linkedin.png"}
-              width={30}
-              height={30}
-              alt="linkedin"
-            />
-          </motion.div>
-        </motion.div>
+            <div className="w-full min-h-[250px] max-w-[500px]  flex items-center sm:justify-end justify-center px-5">
+              <Image
+                src={item.image}
+                width={250}
+                height={250}
+                alt="case study logo"
+                className="w-[200px] h-auto"
+              />
+            </div>
+            <div className="font-Parkinsans sm:text-left text-center text-white/50 px-5 sm:pr-28 pr-5 py-10 border-b-2 border-dashed border-white/50">
+              {item.content}
+            </div>
+          </div>
+        ))}
       </section>
     </div>
   );
