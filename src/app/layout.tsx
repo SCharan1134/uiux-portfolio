@@ -30,7 +30,7 @@ export default function RootLayout({
         <title>jaswanthpindiboina</title>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#1B1B1B]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
         {children}
       </body>

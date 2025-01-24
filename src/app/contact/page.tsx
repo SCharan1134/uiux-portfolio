@@ -18,7 +18,7 @@ export default function Page() {
           onClick={() =>
             router.push("https://www.linkedin.com/in/jaswanthpindiboina/")
           }
-          className="font-fredericka border-2 border-white text-white hover:text-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-5 sm:text-7xl text-3xl sm:min-w-[600px] min-w-[300px]"
+          className="font-fredericka border-2 border-white  text-white hover:text-black hover:bg-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-5 sm:text-7xl text-3xl sm:min-w-[600px] min-w-[300px] transition-all duration-300 ease-in-out"
         >
           LINKEDIN
         </button>
@@ -28,7 +28,7 @@ export default function Page() {
               "https://www.instagram.com/jaswanthpindiboina?igsh=cWxsa2NtaWltd3Yw"
             )
           }
-          className="font-fredericka border-2 border-white text-white hover:text-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-5 sm:text-7xl text-3xl sm:min-w-[600px] min-w-[300px]"
+          className="font-fredericka border-2 border-white text-white hover:text-black hover:bg-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-5 sm:text-7xl text-3xl sm:min-w-[600px] min-w-[300px] transition-all duration-300 ease-in-out"
         >
           INSTAGRAM
         </button>
@@ -39,7 +39,7 @@ export default function Page() {
               "https://mail.google.com/mail/?view=cm&fs=1&to=jaswanth7779@gmail.com"
             )
           }
-          className="font-fredericka border-2 border-white text-white hover:text-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-5 sm:text-7xl text-3xl sm:min-w-[600px] min-w-[300px]"
+          className="font-fredericka border-2 border-white text-white hover:text-black hover:bg-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-5 sm:text-7xl text-3xl sm:min-w-[600px] min-w-[300px] transition-all duration-300 ease-in-out"
         >
           GMAIL
         </button>
