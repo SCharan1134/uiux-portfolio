@@ -42,50 +42,50 @@ export default function Home() {
   return (
     <div className="bg-black text-white">
       {/* hero */}
-      <section className="w-full h-full sm:px-16 px-5">
-        <h1 className="font-fredericka sm:text-[240px] text-8xl sm:tracking-widest tracking-wide">
+      <section className="w-full h-full sm:px-10 px-5">
+        <h1 className="font-fredericka sm:text-[245px] text-8xl sm:tracking-widest tracking-wide">
           Learn<span className="text-[#F8FF00]">.</span>
         </h1>
-        <h1 className="font-fredericka sm:text-[240px] text-8xl sm:tracking-widest tracking-wide">
+        <h1 className="font-fredericka sm:text-[245px] text-8xl sm:tracking-widest tracking-wide">
           Create<span className="text-[#F8FF00]">.</span>
         </h1>
-        <h1 className="font-fredericka sm:text-[240px] text-8xl sm:tracking-widest tracking-wide">
+        <h1 className="font-fredericka sm:text-[245px] text-8xl sm:tracking-widest tracking-wide">
           Inspire<span className="text-[#F8FF00]">.</span>
         </h1>
-        <div className="w-full flex sm:flex-row flex-col gap-10 sm:items-center items-start justify-between sm:py-20 py-10">
+        <div className="w-full flex sm:flex-row flex-col sm:gap-14 gap-10 sm:items-center items-start justify-between sm:py-20 py-10">
           <button
             onClick={() => router.push("/about")}
-            className="font-fredericka border-2 border-white sm:min-w-[300px] min-w-[200px] text-white hover:text-black hover:bg-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-3 sm:text-4xl text-2xl transition-all duration-300 ease-in-out"
+            className="font-fredericka border-2 border-white sm:min-w-[300px] min-w-[200px] tracking-wider w-full text-white hover:text-black hover:bg-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-3 sm:text-4xl text-2xl transition-all duration-300 ease-in-out"
           >
             ABOUT ME
           </button>
           <button
             onClick={() => window.open("/resume.pdf", "_blank")}
-            className="font-fredericka border-2 border-white  sm:min-w-[300px] min-w-[200px] text-white hover:text-black hover:bg-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-3 sm:text-4xl text-2xl transition-all duration-300 ease-in-out"
+            className="font-fredericka border-2 border-white  sm:min-w-[300px] min-w-[200px] tracking-wider w-full text-white hover:text-black hover:bg-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-3 sm:text-4xl text-2xl transition-all duration-300 ease-in-out"
           >
             RESUME
           </button>
           <button
             onClick={() => router.push("/contact")}
-            className="font-fredericka border-2 border-white sm:min-w-[300px] min-w-[200px] text-white hover:text-black hover:bg-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-3 sm:text-4xl text-2xl transition-all duration-300 ease-in-out"
+            className="font-fredericka border-2 border-white sm:min-w-[300px] min-w-[200px] tracking-wider w-full text-white hover:text-black hover:bg-[#F8FF00] hover:border-[#F8FF00] rounded-full px-8 py-3 sm:text-4xl text-2xl transition-all duration-300 ease-in-out"
           >
             CONTACT
           </button>
         </div>
       </section>
       {/* logo */}
-      <section className="relative w-full h-full  sm:px-16 px-5 flex sm:flex-row flex-col sm:items-start items-center justify-center sm:gap-28 gap-5 py-16">
+      <section className="relative w-full h-full  sm:px-48 px-5 flex sm:flex-row flex-col sm:items-start items-center justify-center  py-16">
         <div className="bg-black z-50">
           <Image
             src={"/logo.png"}
-            width={500}
+            width={700}
             height={500}
             alt="logo"
-            className=" rounded-full w-full max-w-[500px] z-50 h-full object-contain"
+            className=" rounded-full sm:w-[600px] w-full max-w-[700px] z-50 h-full object-contain"
           />
         </div>
-        <div className="py-24  z-50">
-          <h2 className="w-fit font-Parkinsans text-3xl">
+        <div className="py-40  z-50 flex-1">
+          <h2 className="w-fit font-Parkinsans text-3xl tracking-widest leading-snug">
             <p className="text-white/50 bg-black">
               <span className="text-[#F8FF00]">&quot;</span>
               Design Is Not Just What It
@@ -106,7 +106,7 @@ export default function Home() {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <div className="w-full min-h-[250px] max-w-[600px] flex items-center sm:justify-end justify-center px-5 ">
+            <div className="w-full min-h-[250px] sm:min-w-[600px] min-w-[200px] max-w-[600px] flex items-center sm:justify-end justify-center px-5 ">
               {hoveredIndex === index ? (
                 <Image
                   src={item.hover}
@@ -125,7 +125,7 @@ export default function Home() {
                 />
               )}
             </div>
-            <div className="font-Parkinsans sm:text-left text-center text-white/50  sm:pr-28 pr-5 py-10 border-b-2 border-dashed  border-white/50">
+            <div className="font-Parkinsans tracking-wider leading-loose sm:text-left text-center text-white/50  sm:pr-28 pr-5 py-10 border-b-2 border-dashed  border-white/50">
               {item.content}
             </div>
           </div>

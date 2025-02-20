@@ -13,16 +13,12 @@ function FoodBuddy() {
         <Image src={"/arrow-w.png"} width={50} height={50} alt="right arrow" />
         {/* <FiArrowLeft className="text-lg sm:text-7xl" /> */}
       </div>
-      <section className="w-full h-screen flex justify-center items-center">
-        {/* <Image
-          src={"/wiggles_full.png"}
-          width={1920}
-          height={21039}
-          alt="about"
-        /> */}
-        <h1 className="sm:text-9xl text-2xl text-center">
+      <section className="w-full h-full flex flex-col justify-center items-center">
+        <Image src={"/sage-u.png"} width={1920} height={21039} alt="about" />
+        <Image src={"/sage-d.png"} width={1920} height={21039} alt="about" />
+        {/* <h1 className="sm:text-9xl text-2xl text-center">
           Page is under Development
-        </h1>
+        </h1> */}
       </section>
     </div>
   );
