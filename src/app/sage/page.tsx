@@ -1,6 +1,14 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+
+const DynamicYouTubePlayer = dynamic(
+  () => import("@/components/YouTubePlayer"),
+  {
+    ssr: false, // Disable Server-Side Rendering
+  }
+);
 
 function FoodBuddy() {
   const router = useRouter();
@@ -15,6 +23,9 @@ function FoodBuddy() {
       </div>
       <section className="w-full h-full flex flex-col justify-center items-center">
         <Image src={"/sage-u.png"} width={1920} height={21039} alt="about" />
+
+        <DynamicYouTubePlayer />
+
         <Image src={"/sage-d.png"} width={1920} height={21039} alt="about" />
         {/* <h1 className="sm:text-9xl text-2xl text-center">
           Page is under Development
