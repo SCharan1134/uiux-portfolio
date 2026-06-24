@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Waybot case study by Jaswanth: a physical-digital park guide designed to turn queue time into usable park time.">
+  <title>Waybot Case Study — Jaswanth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="inner-page waybot-page">
+  <div class="cursor-dot"></div><div class="noise"></div>
+  <header class="nav-wrap"><a class="wordmark" href="index.html" aria-label="Jaswanth, home"><img src="assets/brand/jash-logo.svg" alt=""></a><nav><a href="work.html">Work</a><a href="process.html">How I work</a><a href="about.html">About</a></nav><a class="status-pill" href="resume.html"><span class="status-dot"></span>Résumé</a></header>
+  <main>
+    <section class="waybot-hero">
+      <div class="waybot-hero-copy reveal">
+        <p class="eyebrow">Waybot · Service design · Product design · 3D</p>
+        <h1>More park.<br><em>Less waiting.</em></h1>
+        <p>Designing a physical-digital park guide that turns passive queue time into more time for discovery, spending, and play.</p>
+        <a class="text-link" href="#overview">Read the case study ↓</a>
+      </div>
+      <div class="waybot-stage reveal">
+        <div class="waybot-orbit orbit-a">NAVIGATE</div><div class="waybot-orbit orbit-b">BOOK</div><div class="waybot-orbit orbit-c">ASSIST</div>
+        <div class="bot">
+          <div class="bot-head"><div class="bot-face"><i></i><i></i></div><div class="bot-screen"><span>Good morning!</span><strong>Where should<br>we go next?</strong><div class="bot-actions"><b>Book a ride</b><b>Find a place</b></div></div></div>
+          <div class="bot-base"><i></i><span>WAYBOT</span><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="waybot-summary section-pad" id="overview">
+      <p class="eyebrow reveal">Executive summary</p>
+      <div class="summary-grid reveal">
+        <h2>A service platform for happier visitors and better-managed parks.</h2>
+        <div><p>Large amusement parks promise a full day of memorable experiences. Yet visitors often spend that expensive day standing in queues, navigating confusing maps, or searching for assistance.</p><p>Waybot explores how a friendly mobile guide, connected to park operations, could help visitors reserve rides, navigate, and request support while helping parks distribute crowds and create more opportunities for in-park engagement.</p></div>
+      </div>
+      <div class="case-meta reveal"><div><span>Project type</span><strong>Academic concept</strong></div><div><span>My role</span><strong>Research, UX, product + form design</strong></div><div><span>Primary users</span><strong>Park visitors + operators</strong></div><div><span>Status</span><strong>Concept prototype</strong></div></div>
+    </section>
+
+    <section class="impact-strip">
+      <article><span>Human value</span><strong>More time enjoying the visit, less time managing it.</strong></article>
+      <article><span>Business value</span><strong>Better crowd distribution, service coverage, and spending potential.</strong></article>
+      <article><span>Operational value</span><strong>A connected service touchpoint and source of park-wide insight.</strong></article>
+    </section>
+
+    <section class="waybot-problem section-pad">
+      <div class="chapter reveal"><span>01</span><p>Discover</p></div>
+      <div class="problem-grid">
+        <div class="reveal"><p class="eyebrow">The challenge</p><h2>A ticket buys access.<br>Queues consume the experience.</h2></div>
+        <div class="reveal"><p class="large-copy">Across major parks, millions of annual visitors move through complex environments with fluctuating demand, limited staff, and dozens of competing attractions.</p><p>The problem was bigger than long lines. Visitors struggled to understand wait times, navigate the park, coordinate their day, and access support when they needed it.</p><div class="hmw"><span>How might we</span><strong>alleviate the need to stand in long queues while improving the full park experience?</strong></div></div>
+      </div>
+      <div class="park-scale reveal"><div><strong>58M</strong><span>Annual Disney World visitors*</span></div><div><strong>32.8M</strong><span>Annual Six Flags visitors*</span></div><div><strong>10.9M</strong><span>Annual Universal Florida visitors*</span></div><p>*Benchmark figures used during the original project to understand the scale and complexity of large parks.</p></div>
+    </section>
+
+    <section class="park-benchmark section-pad">
+      <div class="section-heading reveal"><div><p class="eyebrow">Competitive benchmark · Mapping the scale</p><h2>Three parks.<br>One shared challenge.</h2></div><p>I compared parks with different footprints, audiences, and attraction mixes to understand why a flexible guidance system needed to work beyond any single park.</p></div>
+      <div class="park-map-grid">
+        <article class="park-map-card reveal">
+          <div class="map-art real-map"><img src="assets/maps/universal-studios-florida.webp" alt="Universal Studios Florida illustrated park map"></div>
+          <div class="map-card-top"><span>01 · ORLANDO, FLORIDA</span><strong>Since 1990</strong></div>
+          <h3>Universal Studios Florida</h3>
+          <p>A dense, story-driven park where annual events and high-profile attractions create concentrated visitor demand.</p>
+          <div class="map-stats"><b>10.9M visitors*</b><b>Ranked 11th*</b></div>
+        </article>
+        <article class="park-map-card reveal">
+          <div class="map-art real-map"><img src="assets/maps/six-flags-fiesta-texas.webp" alt="Six Flags Fiesta Texas illustrated park map"></div>
+          <div class="map-card-top"><span>02 · NORTH AMERICA</span><strong>Since 1960</strong></div>
+          <h3>Six Flags</h3>
+          <p>A sprawling thrill-focused environment where attraction demand and walking distance make orchestration essential.</p>
+          <div class="map-stats"><b>32.8M visitors*</b><b>260 acres*</b></div>
+        </article>
+        <article class="park-map-card reveal">
+          <div class="map-art real-map"><img src="assets/maps/disney-magic-kingdom.webp" alt="Disney Magic Kingdom illustrated park map"></div>
+          <div class="map-card-top"><span>03 · BAY LAKE, FLORIDA</span><strong>Since 1971</strong></div>
+          <h3>Disney World</h3>
+          <p>A destination-scale resort with multiple parks, experiences, and complex family itineraries to coordinate.</p>
+          <div class="map-stats"><b>58M visitors*</b><b>27,000 acres*</b></div>
+        </article>
+      </div>
+      <div class="benchmark-takeaway reveal"><span>What the maps revealed</span><h3>As park size and attraction variety increase, visitors need more than directions. They need help making decisions throughout the day.</h3></div>
+    </section>
+
+    <section class="findings section-pad">
+      <div class="section-heading reveal"><div><p class="eyebrow">Signals from the experience</p><h2>The queue was only<br>the visible problem.</h2></div><p>Mapping the broader journey revealed connected breakdowns across planning, arrival, navigation, attractions, safety, and support.</p></div>
+      <div class="finding-grid">
+        <article class="reveal"><span>01 · TIME</span><h3>Waiting creates dead time</h3><p>Visitors lose valuable park time standing in lines and struggle to allocate their day across attractions.</p></article>
+        <article class="reveal"><span>02 · ORIENTATION</span><h3>Navigation adds friction</h3><p>Large environments and information-heavy apps make it difficult to find attractions and understand what to expect.</p></article>
+        <article class="reveal"><span>03 · SUPPORT</span><h3>Help is not always nearby</h3><p>Peak crowds stretch on-ground personnel while missing children, lost items, and accessibility needs demand fast assistance.</p></article>
+        <article class="reveal"><span>04 · OPERATIONS</span><h3>Demand is uneven</h3><p>Traffic fluctuates throughout the park, producing overloaded attractions while other experiences remain underused.</p></article>
+      </div>
+    </section>
+
+    <section class="journey-section section-pad">
+      <div class="chapter reveal"><span>02</span><p>Define</p></div>
+      <div class="section-heading reveal"><div><p class="eyebrow">Journey analysis</p><h2>Where attention<br>and value diverge.</h2></div><p>Visitor engagement peaks during the experience itself. Business engagement is strongest around ticketing and queue management. Waybot targets the gap between them.</p></div>
+      <div class="journey-chart reveal"><div class="journey-labels"><span>Planning</span><span>Booking</span><span>Entry</span><span>Experience</span><span>Leaving</span></div><svg viewBox="0 0 1000 300" preserveAspectRatio="none" aria-label="Visitor journey engagement curve"><path class="area" d="M0 280 C70 100 120 190 200 220 C270 260 310 140 370 220 C440 290 470 130 530 170 C590 230 610 55 680 90 C750 130 780 180 820 45 C850 160 900 230 1000 270 L1000 300 L0 300Z"/><path class="line" d="M0 280 C70 100 120 190 200 220 C270 260 310 140 370 220 C440 290 470 130 530 170 C590 230 610 55 680 90 C750 130 780 180 820 45 C850 160 900 230 1000 270"/></svg><div class="journey-notes"><span>Deals</span><span>Ticketing</span><span>Navigation</span><span>Queue management</span><span>Support</span></div></div>
+      <div class="opportunity-row reveal"><span>Opportunity</span><h3>Convert freed queue time into discovery, delight, and measurable park value.</h3></div>
+    </section>
+
+    <section class="value-section section-pad">
+      <p class="eyebrow reveal">The value proposition</p>
+      <h2 class="reveal">A friendly guide that helps visitors spend less time managing the park and more time <em>experiencing it.</em></h2>
+      <div class="value-grid">
+        <article class="reveal"><span>For visitors</span><h3>Reserve. Roam. Return.</h3><p>Join virtual queues, understand the park, discover nearby experiences, and get assistance without depending entirely on a phone.</p></article>
+        <article class="reveal"><span>For operators</span><h3>See. Balance. Improve.</h3><p>Distribute demand, extend service coverage, understand visitor behavior, and surface relevant park offers.</p></article>
+      </div>
+    </section>
+
+    <section class="system-section section-pad">
+      <div class="chapter reveal"><span>03</span><p>Design</p></div>
+      <div class="section-heading reveal"><div><p class="eyebrow">Product strategy</p><h2>Not another app.<br>A connected service.</h2></div><p>The concept combines a mobile physical guide, visitor interface, virtual queue system, and park operations integration.</p></div>
+      <div class="system-map reveal"><div class="system-core"><div class="mini-bot"><i></i><i></i><strong>WAYBOT</strong></div></div><div class="system-node n1"><span>01</span><strong>Virtual queues</strong><p>Reserve slots and receive return-time guidance.</p></div><div class="system-node n2"><span>02</span><strong>Wayfinding</strong><p>Guide visitors and reveal nearby opportunities.</p></div><div class="system-node n3"><span>03</span><strong>Assistance</strong><p>Support missing-child, lost-item, and help requests.</p></div><div class="system-node n4"><span>04</span><strong>Park insights</strong><p>Surface demand, movement, and service patterns.</p></div></div>
+    </section>
+
+    <section class="sketch-section section-pad">
+      <div class="section-heading reveal"><div><p class="eyebrow">Form exploration</p><h2>Friendly enough to approach.<br>Practical enough to deploy.</h2></div><p>Early sketches explored mobility, screen placement, proportions, and a character that balances the Caregiver and Jester archetypes.</p></div>
+      <div class="sketch-wall reveal">
+        <div class="sketch-card s1"><div class="sketch-bot round"><i></i><i></i><b></b></div><span>Approachable character studies</span></div>
+        <div class="sketch-card s2"><div class="sketch-bot lean"><i></i><i></i><b></b></div><span>Screen and body integration</span></div>
+        <div class="sketch-card s3"><div class="sketch-bot tall"><i></i><i></i><b></b></div><span>Mobile guidance concepts</span></div>
+        <div class="sketch-card s4"><div class="sketch-bot final"><i></i><i></i><b></b></div><span>Selected direction</span></div>
+      </div>
+      <p class="sketch-note reveal">Original sketches will be inserted here as optimized project assets in the final content pass.</p>
+    </section>
+
+    <section class="personality-section section-pad">
+      <div class="section-heading reveal"><div><p class="eyebrow">Personality design · Caregiver meets Jester</p><h2>Helpful should still<br>feel human.</h2></div><p>Waybot uses simple expressions to communicate emotional state at a glance, making assistance feel friendly rather than transactional.</p></div>
+      <div class="expression-grid">
+        <article class="expression-card reveal"><div class="expression happy"><i></i><i></i><b></b></div><span>When people need help</span><strong>Warm + reassuring</strong><p>A welcoming expression lowers the barrier to asking for assistance.</p></article>
+        <article class="expression-card reveal"><div class="expression playful"><i></i><i></i><b></b></div><span>When people say “I’m handsome”</span><strong>Playful + memorable</strong><p>A little personality creates delight and makes the service easier to remember.</p></article>
+        <article class="expression-card reveal"><div class="expression flat"><i></i><i></i><b></b></div><span>When people say “I’m fat”</span><strong>Expressive + bounded</strong><p>Waybot responds to inappropriate comments without escalating the interaction.</p></article>
+      </div>
+    </section>
+
+    <section class="solution-section section-pad">
+      <div class="chapter reveal"><span>04</span><p>Prototype</p></div>
+      <div class="solution-grid">
+        <div class="reveal"><p class="eyebrow">Final direction</p><h2>A moving service touchpoint with a business model built in.</h2><p class="large-copy">The final form uses a large portrait display, illuminated base, and compact mobile body. The screen supports core park tasks while creating space for contextual park promotions during idle moments.</p><div class="feature-list"><span>Virtual queue booking</span><span>Live navigation</span><span>Report missing</span><span>Call for assistance</span><span>Contextual offers</span><span>Visitor insights</span></div></div>
+        <div class="prototype-stage reveal"><div class="bot final-bot"><div class="bot-head"><div class="bot-face"><i></i><i></i></div><div class="bot-screen"><small>11:43 · 75°</small><strong>What can I<br>help with?</strong><div class="bot-menu"><b>Book a ride</b><b>Navigation</b><b>Report missing</b></div><div class="bot-ad"><span>While you wait</span><strong>Lunch is 4 min away →</strong></div></div></div><div class="bot-base"><i></i><span>WAYBOT</span><i></i></div></div></div>
+      </div>
+    </section>
+
+    <section class="impact-section section-pad">
+      <div class="chapter reveal"><span>05</span><p>Measure</p></div>
+      <div class="section-heading reveal"><div><p class="eyebrow">Business impact framework</p><h2>What success would<br>look like.</h2></div><p>As a concept project, these are proposed success measures, not claimed launch results.</p></div>
+      <div class="metric-grid">
+        <article class="reveal"><span>Experience</span><strong>↓ Perceived wait time</strong><p>Measure satisfaction, itinerary completion, and time spent in physical queues.</p></article>
+        <article class="reveal"><span>Revenue</span><strong>↑ In-park spend</strong><p>Measure purchases and offer engagement during time freed by virtual queues.</p></article>
+        <article class="reveal"><span>Operations</span><strong>↑ Attraction utilization</strong><p>Measure crowd distribution, ride demand balance, and service-request resolution.</p></article>
+        <article class="reveal"><span>Loyalty</span><strong>↑ Return intent</strong><p>Measure satisfaction, recommendation, and likelihood of another visit.</p></article>
+      </div>
+      <div class="pilot-plan reveal"><span>Recommended pilot</span><h3>Start with one high-traffic park zone, three Waybots, and a limited virtual-queue integration.</h3><p>Compare the pilot zone against a control area using visitor satisfaction, staff requests, attraction utilization, offer engagement, and task-completion metrics.</p></div>
+    </section>
+
+    <section class="reflection-section section-pad">
+      <p class="eyebrow reveal">Reflection</p><div class="summary-grid reveal"><h2>The strongest experience does not always live inside a screen.</h2><div><p>Waybot pushed me to think beyond interface design and consider the complete service: visitors, park staff, operations systems, physical form, and the business model supporting it.</p><p>The next step would be validating the concept with visitors and park employees, then narrowing the first release around virtual queues, navigation, and assistance.</p><a class="contact-link" href="work.html"><span>Explore more work</span>→</a></div></div>
+    </section>
+    <section class="action-video section-pad">
+      <div class="section-heading reveal"><div><p class="eyebrow">Finale · Prototype in action</p><h2>Meet Waybot.</h2></div><p>The motion prototype demonstrates how Waybot’s physical form, interface, and personality come together as one service experience.</p></div>
+      <div class="video-frame reveal">
+        <iframe src="https://www.youtube.com/embed/GuuWa0bgf5g?si=v9OPRKQNdIsTrnrN" title="Waybot prototype in action" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <a class="text-link video-link reveal" href="https://youtu.be/GuuWa0bgf5g?si=v9OPRKQNdIsTrnrN" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+    </section>
+  </main>
+  <footer><span>© 2026 Jaswanth Pindipobina</span><span>Waybot · Concept case study</span><a href="work.html">All work →</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
